@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'CBNUJIKJI';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/CBNUJIKJI.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+#calendar{
+  width: 700px;
+  height: 600px;
+/* 달력 전체 테두리넣으면 레이아웃 깨지는문제 */
+}
+span{
+  justify-content: end;
+  color: #413F42;
+  margin: 15px 0 15px 10px;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'CBNUJIKJI';
+}
+.month{
+  display: flex;
+  justify-content: flex-end;
+  color: #333;
+  margin: 0 0 10px 0 ;
+}
+.week{
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  padding: 5px;
+  margin: 0;
+  background-color: #D8E6EE;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'CBNUJIKJI';
+}
+.day>.each{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  font-size: 13px;
+  font-family: 'CBNUJIKJI';
+  border: solid #333;
+  border-width: .3px 0 0 .3px;
+}
+div.day>div.each:hover{
+  background-color: #6D8B74;
+  color: #fff;
+}
+.day>.each:nth-child(2n){
+  background-color: #FCFDFF;
+}
+.day>.each:nth-child(2n+1){
+  background-color: #F3F5F7;
+}
+.day>.each:nth-child(6){
+  background-color: #F4BFBF;
+}
+div > .day >.each.study{
+  background-color: #D3EBCD;
+}
+div > .day >.each.study_title::after{
+  content: 'KDT study';
+  background-color: #8CC0DE;
+  color: #fff;
+  border-radius: 40px;
+  padding: 1px 5px;
+}
+.day> .each:nth-child(7n+1){
+  color: red;
+  font-weight: 700;
+  background-color: #FCF9C6;
+}
+.posco:after{
+  content: ' POSCO  ';
+  background-color: #005386;
+  color: #fff;
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+div.none{
+  opacity: 0;
+}
+
